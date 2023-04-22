@@ -197,6 +197,7 @@ header video {
 	padding-bottom: 3vh;
 }
 
+<<<<<<< HEAD
 .projects h3{
 	font-size: var(--moderate);
 	text-transform: uppercase;
@@ -256,6 +257,27 @@ header video {
 	100% {
 		transform: translate(0, -100%);
 	}
+=======
+.project-box{
+	border: 1px solid red;
+	padding: 150px;
+	background-image: url(./images/project-sample.gif);
+	margin: 45px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.project-picks{
+	display: flex;
+}
+
+.project-section-one{
+	float: left;
+}
+
+.project-section-two{
+	float: right;
+>>>>>>> 6508369c1bd77236aa3904d16a38fe56808cdd54
 }
 
 .project-one{
