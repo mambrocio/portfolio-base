@@ -88,7 +88,7 @@ header{
 	z-index: 10;
 	position: fixed;
 	width: 100%;
-
+	margin-top: -2.2vh;
 /* From https://css.glass */
 	background: rgba(255, 255, 255, 0.2);
 	border-radius: 0 ,0 , 22px, 22px;
@@ -211,7 +211,17 @@ header video {
 .old-portfolio img{
 	width: 600px;
 	height: 400px;
-	
+	border-radius: 18px;
+	display: block;
+}
+.old-portfolio img, .old-portfolio:visited{
+	transition-duration: 0.65s;
+}
+
+.old-portfolio img:hover{
+	transition-duration: .65s;	
+	box-shadow:  0px 2px 20px var(--black);
+
 }
 	/*Project Section*/
 
@@ -262,6 +272,12 @@ header video {
 	margin: 20px;
 }
 
+.project-box a{
+	border-radius: 42px;
+	padding-bottom: 178px;
+	padding-right: 315px;
+}
+
 .line-one{
 	display: flex;
 }
@@ -298,21 +314,31 @@ header video {
 	display: flex;
 }
 
-.project-one{
-
+.project-one-old{
+	background-image: url(./images/project-one-bg.PNG);
+	background-position: center center;
+	background-size: cover;
 }
 
-.project-two{
-
+.project-two-old{
+	background-image: url(./images/project-two-bg.PNG);
+	background-position: center center;
+	background-size: cover;
 }
-.project-three{
-
+.project-three-old{
+	background-image: url(./images/project-three-bg.PNG);
+	background-position: center center;
+	background-size: cover;
 }
-.project-four{
-
+.project-four-old{
+	background-image: url(./images/project-four-bg.PNG);
+	background-position: center center;
+	background-size: cover;
 }
-.project-five{
-
+.project-five-old{
+	background-image: url(./images/project-five-bg.PNG);
+	background-position: center center;
+	background-size: cover;
 }
 
 /*---Contact Pages---*/
