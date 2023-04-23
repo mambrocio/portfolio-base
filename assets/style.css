@@ -31,6 +31,10 @@
 	box-sizing: border-box;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 body{
 	font-family:'Montserrat',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	margin: 0;
@@ -84,14 +88,14 @@ header{
 	z-index: 10;
 	position: fixed;
 	width: 100%;
-/* From https://css.glass */
-background: rgba(255, 255, 255, 0.2);
-border-radius: 0 ,0 , 22px, 22px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(3px);
--webkit-backdrop-filter: blur(3px);
-}
 
+/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 0 ,0 , 22px, 22px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
+}
 
 header .site-logo{
 	font-size: 42px;
@@ -110,7 +114,6 @@ header .site-logo{
 	transition-duration: 0.65s;
 	text-shadow: 2px 2px var(--white);
 }
-
 
 header nav{
 	z-index: 1;
@@ -155,7 +158,7 @@ header a:hover, header a:active:hover{
 header h1{
 	z-index:1;
 	position: relative;
-	padding-top: 20vh;
+	padding-top: 40vh;
 	font-size: var(--extra-extra-large);
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -177,12 +180,14 @@ header video {
 }
 
 /*---Main---*/
-
 	/*About*/
 
+.opener{
+	padding-top: 30vh;
+	padding-bottom: 23vh;
+}
 
 .opener-header h2{
-	padding-top: 20vh;
 	float: left;
 	text-transform: uppercase;
 	font-size: var(--extra-large);
@@ -191,15 +196,27 @@ header video {
 .opener-content{
 	padding-top: 5.8vh;
 	float: right;
-	text-align: right;
-	width:60%;
-	font-size: var(--small)
+	text-align: left;
+	width:40%;
+	font-size: var(--small);
+	z-index: 1;
+	left: 50%;
 }
 
-/*---Project Section---*/
+.old-portfolio{
+	margin-top: 5vh;
+	float:left;
+}
+
+.old-portfolio img{
+	width: 600px;
+	height: 400px;
+	
+}
+	/*Project Section*/
 
 .projects{
-	padding-top: 1.7vh;
+	padding-top: 10vh;
 	padding-bottom: 20vh;
 	overflow-x: hidden;
 }
@@ -211,6 +228,13 @@ header video {
 	padding-bottom: 3vh;
 }
 
+.projects p{
+	text-align: center;
+}
+
+.project-header-desc {
+	padding-bottom: 3vh;
+}
 
 .projects h3{
 	font-size: var(--moderate);
@@ -221,6 +245,11 @@ header video {
 
 .project-section-one{
 	display: flex;
+	animation: project-section-one 20000ms linear infinite ;
+}
+
+.project-section-one:hover{
+	animation-play-state: paused;
 }
 
 .project-box{
@@ -233,17 +262,6 @@ header video {
 	margin: 20px;
 }
 
-.project-select-one {
-	animation: project-select-one 40s linear infinite;
-}
-
-.project-select-one .select, .project-select-one .select:visited{
-	animation: project-select-one 40s linear infinite;
-}
-
-.project-select-one .select:hover, .project-select-one .select:active:hover {
-	animation: none !important;
-}
 .line-one{
 	display: flex;
 }
@@ -254,15 +272,12 @@ header video {
 
 .project-section-two{
 	display: flex;
+	animation: project-select-two 40s reverse linear infinite;
 }
 
-.project-section-two {
-	animation: project-select-one 40s reverse linear infinite;
-}
-
-@keyframes project-select-one{
+@keyframes project-section-one{
 	0% {
-		transform: translate(0,0);
+		transform: translate(0%,0);
 	}
 	100% {
 		transform: translate(-100%, 0);
@@ -271,10 +286,10 @@ header video {
 
 @keyframes project-select-two{
 	0% {
-		transform: translate(0, 0);
+		transform: translate(-25%, 0);
 	}
 	100% {
-		transform: translate(0, -100%);
+		transform: translate(-100%, 0);
 	}
 
 }
@@ -282,8 +297,6 @@ header video {
 .project-picks{
 	display: flex;
 }
-
-
 
 .project-one{
 
