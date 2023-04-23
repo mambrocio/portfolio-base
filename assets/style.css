@@ -74,21 +74,32 @@ a{
 /*---Header Styles---*/
 
 header{
-	padding-top: 2.5vh;
 	padding-bottom: 40vh;
 }
 
-.logo-and-nav{
+.logo-and-nav {
+	padding-top: 2vh;
+	padding-bottom: 1.5vh;
 	display: flex;
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 0 ,0 , 22px, 22px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3px);
+-webkit-backdrop-filter: blur(3px);
 }
+
 
 header .site-logo{
 	font-size: 42px;
 	font-weight: 800;
 	text-transform: uppercase;
 	font-family: 'Inter Tight',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	z-index: 1;
 	color: var(--black);
+	z-index: 1;
 }
 
 .site-logo a, .site-logo a:visited{
@@ -97,17 +108,17 @@ header .site-logo{
 
 .site-logo a:hover, .site-logo a:active:hover{
 	transition-duration: 0.65s;
-	text-decoration: underline;
 	text-shadow: 2px 2px var(--white);
 }
 
+
 header nav{
 	z-index: 1;
-	margin-left: auto;
+	float: right;
 }
 
 header ul{
-	padding-top: .5vh;
+	padding-top: 1.3vh;
 	
 }
 
@@ -117,6 +128,12 @@ nav li {
     border-bottom: 1px solid transparent;
     padding-bottom: 1px;
 	font-size: var(--small);
+	padding: 8px
+}
+
+nav li:last-child{
+	padding: 0;
+	padding-left: 8px;
 }
 
 header a{
@@ -124,7 +141,6 @@ header a{
 	color: var(--black);
 	font-weight: 600;
 	justify-content: space-between;
-	padding: 15px;
 }
 
 header a, header:visited{
@@ -132,8 +148,6 @@ header a, header:visited{
 }
 
 header a:hover, header a:active:hover{
-/* From https://css.glass */
-	color: rgba(190,66,0,255);
 	transition-duration: 0.65s;
 	text-shadow: 1px 2px rgba(255,254,65,255);
 }
@@ -185,7 +199,7 @@ header video {
 /*---Project Section---*/
 
 .projects{
-	padding-top: var(--top-pad);
+	padding-top: 1.7vh;
 	padding-bottom: 20vh;
 	overflow-x: hidden;
 }
@@ -197,7 +211,7 @@ header video {
 	padding-bottom: 3vh;
 }
 
-<<<<<<< HEAD
+
 .projects h3{
 	font-size: var(--moderate);
 	text-transform: uppercase;
@@ -219,18 +233,23 @@ header video {
 	margin: 20px;
 }
 
-.project-select-one{
+.project-select-one {
 	animation: project-select-one 40s linear infinite;
 }
 
+.project-select-one .select, .project-select-one .select:visited{
+	animation: project-select-one 40s linear infinite;
+}
+
+.project-select-one .select:hover, .project-select-one .select:active:hover {
+	animation: none !important;
+}
 .line-one{
-	animation-delay: 2.50s ;
 	display: flex;
 }
 
 .line-two{
 	display: flex;
-	animation-delay: 2.50s ;
 }
 
 .project-section-two{
@@ -257,28 +276,14 @@ header video {
 	100% {
 		transform: translate(0, -100%);
 	}
-=======
-.project-box{
-	border: 1px solid red;
-	padding: 150px;
-	background-image: url(./images/project-sample.gif);
-	margin: 45px;
-	background-repeat: no-repeat;
-	background-size: cover;
+
 }
 
 .project-picks{
 	display: flex;
 }
 
-.project-section-one{
-	float: left;
-}
 
-.project-section-two{
-	float: right;
->>>>>>> 6508369c1bd77236aa3904d16a38fe56808cdd54
-}
 
 .project-one{
 
