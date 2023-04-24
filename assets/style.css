@@ -1,4 +1,6 @@
-:root{
+/* Root rules to tay consistent with styles all around */
+
+:root{ 
 	/*-Font Size Rules */
 	--extra-extra-large: 72px;
 	--extra-large: 56px;
@@ -72,7 +74,7 @@ a{
 /*---Special Stylistic Global Rule--- */
 
 .o-line{
-	text-decoration: line-through;
+	text-decoration: line-through;  /* This line enables a quirky stylistic choice for the adding a line through to every header or choice of elements applying a strike through to the letter "O" */
 }
 
 /*---Header Styles---*/
@@ -89,6 +91,7 @@ header{
 	position: fixed;
 	width: 100%;
 	margin-top: -2.2vh;
+
 /* From https://css.glass */
 	background: rgba(255, 255, 255, 0.2);
 	border-radius: 0 ,0 , 22px, 22px;
@@ -103,7 +106,7 @@ header .site-logo{
 	text-transform: uppercase;
 	font-family: 'Inter Tight',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	color: var(--black);
-	z-index: 1;
+	z-index: 1; /* My site's logo, chose the element as a span rather than an h1 tag*/
 }
 
 .site-logo a, .site-logo a:visited{
@@ -122,9 +125,9 @@ header nav{
 
 header ul{
 	padding-top: 1.3vh;
-	
 }
 
+	/*Navigation*/
 nav li {
 	list-style-type: none;
 	display: inline;
@@ -146,15 +149,18 @@ header a{
 	justify-content: space-between;
 }
 
+
 header a, header:visited{
 	transition-duration: 0.65s;
 }
 
+	/*Chose to have all header anchor to hover interact to save some line of code */
 header a:hover, header a:active:hover{
 	transition-duration: 0.65s;
 	text-shadow: 1px 2px rgba(255,254,65,255);
 }
 
+	/*Header for the background video*/
 header h1{
 	z-index:1;
 	position: relative;
@@ -166,11 +172,14 @@ header h1{
 	text-align: right;
 }
 
-header h1 .header-o{
+header h1 .header-o{ 
+	/* This header o-line gets a different style blending it into a background of the video */
 	color: rgba(255,254,65,255)
 }
 
-header video {
+header video { 
+	/*Had to get a help on this from multiple sources, video backgrounds are hard to position, 
+	I tried to get into a gif but it is rather pixelated, so I stuck it even with all the headache */
 	overflow: hidden;
 	position: absolute;
 	top: 0;
@@ -219,6 +228,7 @@ header video {
 }
 
 .old-portfolio img:hover{
+	/* Hover interaction of the image  */
 	transition-duration: .65s;	
 	box-shadow:  0px 2px 20px var(--black);
 
@@ -258,7 +268,17 @@ header video {
 	animation: project-section-one 20000ms linear infinite ;
 }
 
+.project-section-two{
+	display: flex;
+	animation: project-select-two 20000ms reverse linear infinite;
+}
+
+
 .project-section-one:hover{
+	animation-play-state: paused;
+}
+
+.project-section-two:hover{
 	animation-play-state: paused;
 }
 
@@ -279,17 +299,18 @@ header video {
 }
 
 .line-one{
+	
 	display: flex;
 }
+
+/* Named them lines due to the nature of the HTML structure rather of the way they are css relation animated*/
 
 .line-two{
 	display: flex;
 }
 
-.project-section-two{
-	display: flex;
-	animation: project-select-two 40s reverse linear infinite;
-}
+
+
 
 @keyframes project-section-one{
 	0% {
@@ -302,7 +323,7 @@ header video {
 
 @keyframes project-select-two{
 	0% {
-		transform: translate(-25%, 0);
+		transform: translate(0, 0);
 	}
 	100% {
 		transform: translate(-100%, 0);
@@ -313,6 +334,8 @@ header video {
 .project-picks{
 	display: flex;
 }
+
+/*This project is */
 
 .project-one-old{
 	background-image: url(./images/project-one-bg.PNG);
